@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alerta RS - Portal de Prevenção e Resposta a Enchentes</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/ajuda.css" />
+  </head>
+  <body>
+    <header>
+      <div class="cabecalho">
+          <div class="logo">
+              <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Fundo do círculo protetor -->
+                  <circle cx="50" cy="50" r="40" fill="#E3F2FD"/>
+              
+                  <!-- Gota d'água estilizada -->
+                  <path d="M50 20 L70 50 A20 20 0 1 1 30 50 Z" fill="#1976D2"/>
+              
+                  <!-- Casa simbolizando proteção -->
+                  <path d="M44 45 L50 35 L56 45 L56 60 L44 60 Z" fill="#FFFFFF"/>
+              
+                  <!-- Texto do logo -->
+                  <text x="110" y="45" font-family="Arial" font-size="24" font-weight="bold" fill="#1976D2">Alerta</text>
+                  <text x="110" y="70" font-family="Arial" font-size="20" fill="#424242">RS</text>
+              
+                  <!-- Ondas representando água/alerta -->
+                  <path d="M240 45 Q250 35, 260 45 Q270 55, 280 45" fill="none" stroke="#1976D2" stroke-width="3"/>
+                  <path d="M240 55 Q250 45, 260 55 Q270 65, 280 55" fill="none" stroke="#1976D2" stroke-width="3"/>
+                </svg>
+          </div>
+          <!-- <h1>Alerta RS</h1> -->
+          <p class="texto-logo">Sistema Integrado de Prevenção e Resposta a Enchentes</p>
+      </div>
+  </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Alertas</a></li>
+        <li><a href="mapa.html">Mapa</a></li>
+        <!-- <li><a href="nivelusuario.html">Game</a></li> -->
+        <li><a href="ajuda.html">Dicas de Segurança</a></li>
+        <li><a href="voluntario.html">Seja Voluntário</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="container">
+        <h1>Defenda-se contra Enchentes</h1>
+        <p>Preparação para enchentes em comunidades sustentáveis</p>
+
+        <div class="section">
+          <h2 class="section-title">Dicas de Prevenção</h2>
+
+            <!-- Dicas e Prevenção -->
+
+              <div class="cards-grid">
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <h3>Monitoramento do Tempo e Alerta</h3>
+                    </div>
+                    <div class="flip-card-back">
+                      <p>Acompanhe a previsão do tempo e configure alertas automáticos para enchentes</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <h3>Preparação do Imóvel</h3>
+                    </div>
+                    <div class="flip-card-back">
+                      <p>Utilize sacos de areia, eleve móveis e mantenha ralos e drenos desobstruídos.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="emergency-kit-card">
+                  <div class="card-header">
+                    <h3>Kit de Emergência</h3>
+                    <button class="expand-btn" onclick="toggleKitDetails(this)">Ver Lista Completa</button>
+                  </div>
+                  <p class="card-preview">Inclua itens essenciais como água, alimentos, primeiros socorros, documentos e lanternas.</p>
+                  <div class="kit-details">
+                    <div class="kit-section">
+                      <h4>Kit Emergencial Básico</h4>
+                      <ul>
+                        <li>Apito</li>
+                        <li>Canivete de 9 funções</li>
+                        <li>Lanterna à dínamo 3 LEDs</li>
+                        <li>Corda com 3 metros (6 milímetros)</li>
+                        <li>Velas</li>
+                        <li>Capa de chuva descartável</li>
+                      </ul>
+                    </div>
+                    
+                    <div class="kit-section">
+                      <h4>Kit Higiene Pessoal</h4>
+                      <ul>
+                        <li>Escova dental (Modelo Hotelaria)</li>
+                        <li>Sabonete 10g (Modelo Hotelaria)</li>
+                        <li>Sachês shampoo 10 ML 2 em 1 (Modelo Hotelaria)</li>
+                      </ul>
+                    </div>
+                    
+                    <div class="kit-section">
+                      <h4>Kit Primeiros Socorros</h4>
+                      <ul>
+                        <li>Pares de luvas</li>
+                        <li>Máscaras descartáveis</li>
+                        <li>Gel higienizante 100 ml</li>
+                        <li>Manta térmica aluminizada original</li>
+                        <li>Atadura compressa</li>
+                        <li>Hipoclorito de sódio (Para purificar água)</li>
+                        <li>Curativos</li>
+                      </ul>
+                    </div>
+                    
+                    <div class="kit-section">
+                      <h4>Documentação e Outros</h4>
+                      <ul>
+                        <li>Porta documento impermeável (Saco Zip)</li>
+                        <li>Porta remédios (Saco Zip)</li>
+                        <li>Kit de 6 sachês de açúcar e 6 sachês sal + receita de soro</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <h3>Kit de Emergência</h3>
+                    </div>
+                    <div class="flip-card-back">
+                      <p>Inclua itens essenciais como água, alimentos, primeiros socorros, documentos e lanternas.</p>
+                    </div>
+                  </div>
+                </div> -->
+
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <h3>Plano Familiar de Emergência:</h3>
+                    </div>
+                    <div class="flip-card-back">
+                      <p>Defina um ponto de encontro e conheça as rotas de evacuação.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <h3>Contanto de emergência:</h3>
+                    </div>
+                    <div class="flip-card-back">
+                      <p>Faça com que os membros da família decorem telefones de emergência.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <h3>Avisos e Alertas:</h3>
+                    </div>
+                    <div class="flip-card-back">
+                      <p>
+                        Confira as notícias atualizadas da Defesa Civil do Rio Grande Do Sul em tempo real.
+                    </p>
+                    <button class="info">
+                        <a class="linkAjuda" href="https://defesacivil.rs.gov.br/avisos-e-alertas" target="_blank">Consulte aqui 🤓</a>
+                    </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- O que fazer antes -->
+
+              <div class="section">
+                <h2 class="section-title">O Que Fazer Antes da Enchente</h2>
+
+                    <div class="cards-grid">
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <h3>Evacuação e Segurança:</h3>
+                          </div>
+                          <div class="flip-card-back">
+                            <p>Evite áreas alagadas e desligue a eletricidade se necessário.</p>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <h3>Segurança:</h3>
+                          </div>
+                          <div class="flip-card-back">
+                            <p>Siga as instruções emitidas por orgãos oficiais.</p>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <h3>Carro:</h3>
+                          </div>
+                          <div class="flip-card-back">
+                            <p>Se estiver de carro, abandone o veículo e busque abrigo.</p>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <h3>Ações Imediatas:</h3>
+                          </div>
+                          <div class="flip-card-back">
+                            <p>Suba para áreas elevadas e fique informado por rádio ou celular.</p>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <h3>Cuidados com a Alimentação e Água:</h3>
+                          </div>
+                          <div class="flip-card-back">
+                            <p>Não consuma alimentos ou água em contato com a enchente.</p>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <h3>Comunicação:</h3>
+                          </div>
+                          <div class="flip-card-back">
+                            <p>
+                              Informe seus familiares sobre sua localização e siga orientações das autoridades.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                <!-- O que fazer depois -->
+
+
+                <div class="section">
+                  <h2 class="section-title">O Que Fazer Depois da Enchente</h2>
+  
+                      <div class="cards-grid">
+                        <div class="flip-card">
+                          <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                              <h3>Retorno ao Imóvel:</h3>
+                            </div>
+                            <div class="flip-card-back">
+                              <p>
+                                Verifique a estrutura da casa antes de entrar.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+        
+                        <div class="flip-card">
+                          <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                              <h3>Limpeza e Higienização:</h3>
+                            </div>
+                            <div class="flip-card-back">
+                              <p>Use proteção para limpar e desinfetar o ambiente.</p>
+                            </div>
+                          </div>
+                        </div>
+        
+                        <div class="flip-card">
+                          <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                              <h3>Cuidados de Saúde:</h3>
+                            </div>
+                            <div class="flip-card-back">
+                              <p>Observe sintomas de infecção e mantenha vacinas atualizadas.</p>
+                            </div>
+                          </div>
+                        </div>
+        
+                        <div class="flip-card">
+                          <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                              <h3>Recuperação de Documentos e Seguros:</h3>
+                            </div>
+                            <div class="flip-card-back">
+                              <p>Notifique o seguro e documente os danos.</p>
+                            </div>
+                          </div>
+                        </div>
+        
+                        <div class="flip-card">
+                          <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                              <h3>Animais:</h3>
+                            </div>
+                            <div class="flip-card-back">
+                              <p>Cuidado com a invasão de bichos como ratos e animais peçonhentos.</p>
+                            </div>
+                          </div>
+                        </div>
+        
+                        <div class="flip-card">
+                          <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                              <h3>Água:</h3>
+                            </div>
+                            <div class="flip-card-back">
+                              <p>
+                                Abra todas as torneiras e registros para limpar a rede de água e depois deixe entrar água limpa.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                
+                
+
+                <!-- fim -->
+
+    <section id="ajuda" class="form-container">
+        <h2>Registre sua Situação</h2>
+        <form>
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" required>
+            </div>
+            <div class="form-group">
+                <label for="situacao">Situação Atual</label>
+                <select id="situacao" required>
+                    <option value="">Selecione...</option>
+                    <option value="risco">Área de Risco</option>
+                    <option value="alagamento">Alagamento</option>
+                    <option value="desabrigado">Desabrigado</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="descricao">Descreva sua Situação</label>
+                <textarea id="descricao" rows="4"></textarea>
+            </div>
+            <button type="submit">Enviar Pedido de Ajuda</button>
+        </form>
+    </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <p class="copyright">&copy; 2024 Portal de Alerta Climático do Sul. Todos os direitos reservados.</p>
+        <p class="contact">Entre em contato com a Defesa Civil do Rio Grande do Sul:</p>
+        
+        <div class="social-links">
+          <ul>
+            <li style="--cor1: #FF0000; --cor2: #FA8072;">
+              <a href="https://www.youtube.com/@DefesaCivildoRioGrandedoSul" target="_blank">
+                <span class="icon">
+                  <img src="./assets/img/youtube.svg" alt="logo-youtube">
+                </span>
+                <span class="text">Youtube</span>
+              </a>
+            </li>
+            <li style="--cor1: #FB3997; --cor2: #FECF12;">
+              <a href="https://www.instagram.com/defesacivilrs/" target="_blank">
+                <span class="icon">
+                  <img src="./assets/img/instagram.svg" alt="logo-instagram">
+                </span>
+                <span class="text">Instagram</span>
+              </a>
+            </li>
+            <li style="--cor1: #00FF00; --cor2: #FB98FB;">
+              <a href="https://api.whatsapp.com/message/2RN2EMU6X6S5B1?autoload=1&app_absent=0" target="_blank">
+                <span class="icon">
+                  <img src="./assets/img/whatsapp.svg" alt="Logo-Whatsapp">
+                </span>
+                <span class="text">WhatsApp</span>
+              </a>
+            </li>
+            <li style="--cor1: #202124; --cor2: #f8f9fa;">
+              <a href="https://x.com/DefesaCivilRS" target="_blank">
+                <span class="icon">
+                  <img src="./assets/img/twitter-x.svg" alt="logo-twitter">
+                </span>
+                <span class="text">Twitter</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="kit.js"></script>
+    <!-- <script src="script.js"></script> -->
+  </body>
+</html>

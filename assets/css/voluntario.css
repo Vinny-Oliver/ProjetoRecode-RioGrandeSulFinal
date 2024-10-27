@@ -1,0 +1,385 @@
+:root {
+    --primary: #1a73e8;
+    --secondary: #34a853;
+    --warning: #fbbc05;
+    --danger: #ea4335;
+    --light: #f8f9fa;
+    --dark: #202124;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--dark);
+    position: relative;
+    
+  }
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(10px); /* Aplica o desfoque */
+    z-index: -1; /* Coloca a imagem desfocada atrás do conteúdo */
+  }
+
+/* Header */
+header {
+    /* background: var(--primary); */
+    color: var(--dark);
+    padding: 1rem;
+    text-align: center;
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cabecalho :hover{
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+.logo {
+  width: 40%;
+  }
+
+.texto-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary);
+  }
+
+
+  .gallery {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+/* Item individual da galeria */
+.gallery-item {
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Efeito hover no item */
+.gallery-item:hover {
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+/* Estilo da imagem dentro do item */
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito hover na imagem */
+.gallery-item:hover .gallery-img {
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .gallery-item {
+        width: 80px;
+        height: 120px;
+    }
+
+    .gallery-item:hover {
+        width: 240px;
+    }
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: #20212427; / */
+    background: rgba(0, 0, 0, 0.322);
+    padding: 1rem;
+    /* border: solid rgba(255, 0, 0, 0.13); */
+    border-radius: 10px;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li {
+  margin: 0 30px;
+}
+
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+  transition: .2s;
+  display: block;
+  position: relative;
+  padding: 10px;
+}
+
+nav ul:hover li a{
+  opacity: .3;
+}
+
+nav ul li a:hover{
+ opacity: 1;
+ transform-style: (1.2); 
+ transform: scale(1.2);
+ transition: transform 0.2s;
+}
+
+nav ul li a::before{
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ background-color:var(--primary);
+ z-index: -1;
+ transform-origin: right;
+ transform: scaleX(0);
+ transition: .2s;
+ border-radius: 25%;
+}
+ul li a:hover::before{
+  transform-origin: left;
+  transform: scaleX(1);
+  transition: transform .2s;
+}
+
+nav a {
+    color: var(--dark);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+#como-ajudar, #voluntario {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(248, 249, 250, 0.656);
+}
+
+#como-ajudar h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#como-ajudar h2, #voluntario h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+  
+#como-ajudar a {
+    color: #007BFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+  
+#como-ajudar a:hover {
+    text-decoration: underline;
+}
+
+#voluntario-artigo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#voluntario-artigo div{
+    flex: 1;
+    min-width: 450px;
+}
+
+#voluntario-artigo p{
+    text-align: justify;
+    font-size: 1.15rem;
+}
+
+#voluntario-artigo figure{
+    flex: 1;
+    min-width: 450px;
+}
+
+#voluntario-artigo figure img{
+    width: 100%;
+}
+
+footer {
+  background-color: rgba(17, 12, 12, 0.247);
+  padding: 20px;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.copyright, .contact {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links ul li {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 60px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.social-links ul li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #333;
+  z-index: 2;
+}
+
+.social-links .icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.social-links img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.social-links .text {
+  position: absolute;
+  opacity: 0;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  color: white;
+  font-weight: 500;
+}
+
+.social-links ul li::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 60px;
+  background-image: linear-gradient(45deg, var(--cor1), var(--cor2));
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* Hover effects */
+.social-links ul li:hover {
+  width: 180px;
+}
+
+.social-links ul li:hover::before {
+  opacity: 1;
+}
+
+.social-links ul li:hover .icon {
+  opacity: 0;
+}
+
+.social-links ul li:hover .text {
+  opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .social-links ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .social-links ul li {
+    width: 180px;
+  }
+  
+  .social-links .text {
+    opacity: 0;
+  }
+  
+  .social-links ul li:hover .icon {
+    opacity: 0;
+  }
+  
+  .social-links ul li:hover .text {
+    opacity: 1;
+  }
+}
